@@ -1,0 +1,6 @@
+# Directorios y archivos de python
+__pycache__/
+.ipynb_checkpoints/
+*.py[cod]
+# Dropbox
+.dropbox
