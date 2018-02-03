@@ -12,8 +12,9 @@ estrella con base al diagrama de Hertzsprung-Russell (diagrama H-R), el cálculo
 del periodo orbital con base a las leyes de Kepler y la ilustración de las
 órbitas elípticas con el sol en el foco.  
 
-El proyecto es realizado por Santiago Mesa bajo la orientación de [Edward
-Villegas Pulgarin](https://github.com/cosmoscalibur).  
+El proyecto es realizado por [Santiago Mesa](https://github.com/samez21)
+bajo la orientación de
+[Edward Villegas Pulgarin](https://github.com/cosmoscalibur).  
 
 Los códigos disponibles en este repositorio se encuentran disponibles bajo
 [licencia MIT](LICENSE).  
