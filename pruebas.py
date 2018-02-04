@@ -45,4 +45,4 @@ print(orbitas.frecuencia_angular(p)) # Prueba de frecuencia angular
 print(orbitas.excentricidad(c,a)) # Prueba de función de orbitas excentricidad
 print(rango_temperaturas.color_estrellas(k)) # Prueba función del rango de temperaturas
 print(orbitas.coordenadas(a,e,w,t))
-print(orbitas.función_orbitas_entera(t,l,e,w,p,a))
+print(orbitas.función_orbitas_entera(t,e,w,a))

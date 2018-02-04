@@ -19,7 +19,7 @@ def Mt_a_Kg(Mt):
     """
     Kg=5.972e24*Mt
     return Kg
-
+    
 def Rt_a_m(Rt):
     """
     se ingresa el valor en radios terrestres y se convierte en metros
@@ -45,3 +45,4 @@ def coordenadas_polares_a_cartesianas(r,A):
 def segundos_a_años(s):
     d=s/31536000
     return d
+    
