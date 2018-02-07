@@ -12,12 +12,13 @@ def periodo_planetas():
     esta función usa las lista de listas en info_programa.py y usa la función tercera_ley ubicada en leyes.py 
     """
     periodos=[]
-    Me=conversiones.Mt_a_Kg(info_programa.estrelllas) # Se llama al factor de conversión 
+    Ce=conversiones.luminosidad_solar_a_vatios(info_programa.estrella[1])# Masa de la estrella - Calcular masa a partir de temp y luminosidad
+    Me=leyes.ecuacion_masa(info_programa.estrella[0],Ce)
     for planeta in info_programa.planetas:
         Co=conversiones.UA_a_m(planeta[1]) # Se convierte a metros para que funcione con la tercera ley
-        Cp=leyes.tercera_ley(Me,Co) # Se calcula el periodo después de realizar conversión 
+        Cp=leyes.tercera_ley(Me,Co) # Se calcula el periodo después de realizar conversión - convertido a años
         periodos.append(Cp) # Se incorpora  el resultado a una lista
-    return periodos 
+    return periodos
         
         
         
