@@ -52,17 +52,19 @@ def coordenadas(a,e,w,t):
     Coo=conversiones.coordenadas_polares_a_cartesianas(r,w*t)
     Coo[0]=Coo[0]-posicion_foco(a,e)
     return Coo
-    
-def función_orbitas_entera(t,e,w,a):
-     T=calculos_planetas.periodo_planetas()
-     T_max=max(T)
-     t_rango=numpy.arange(0,T_max,1000)
-     for t in t_rango:
-         coord_sistema=[t]
-         for planeta in info_programa.planetas:
-             pos_xy=coordenadas(a,e,w,t)
-             coord_sistema.append(pos_xy)
-             
-     
-    
-    
+
+def función_orbitas_entera():
+    T = calculos_planetas.periodo_planetas()
+    T_max = max(T)
+    t_rango = numpy.linspace(0, T_max, 1000)
+    Co_planetas = [t_rango]
+    posicion = 0
+    for planeta in info_programa.planetas:
+        Coo_planeta = []
+        w_planeta = frecuencia_angular(T[posicion])
+        for tiempo in t_rango:
+            Ccarte = coordenadas(planeta[1], planeta[0], w_planeta, tiempo)
+            Coo_planeta.append(Ccarte)
+        Co_planetas.append(numpy.array(Coo_planeta))
+        posicion = posicion + 1
+    return Co_planetas
