@@ -26,7 +26,7 @@ f=2*numpy.pi #Angulo polar
 A=numpy.pi # Angulo dado en radianes
 r=5 # Coordenada polar r
 t=3.154e7 # Periodo de la Tierra en segundos.
-k=30000 #temperatura de estrella
+k=5778 #temperatura de estrella
 l=3.827e26
 w=198171664.58844414 # Frecuencia Angular de la tierra
 print(leyes.ley_stefan_boltzmann(T,L)) # Prueba  de la ley de Stefan-Boltzmann
@@ -45,4 +45,6 @@ print(orbitas.frecuencia_angular(p)) # Prueba de frecuencia angular
 print(orbitas.excentricidad(c,a)) # Prueba de función de orbitas excentricidad
 print(rango_temperaturas.color_estrellas(k)) # Prueba función del rango de temperaturas
 print(orbitas.coordenadas(a,e,w,t))
-print(orbitas.función_orbitas_entera(t,e,w,a))
+ensayo=orbitas.función_orbitas_entera()
+print(len(ensayo))
+print(len(ensayo[1]))
