@@ -39,8 +39,7 @@ def frecuencia_angular(p):
     """
     Funcion que permite encontrar la frecuencia angular usando el periodo
     """
-    f=1/p # Primeroo se encuentra la frecuencia
-    w=2*numpy.pi/f # Luego la frecuencia angular
+    w=2*numpy.pi/p # Luego la frecuencia angular
     return w
 
 
@@ -50,13 +49,13 @@ def coordenadas(a,e,w,t):
     """
     r=a*(1-e**2)/(1+e*numpy.cos(angulo_orbital_tiempo(w,t)))
     Coo=conversiones.coordenadas_polares_a_cartesianas(r,w*t)
-    Coo[0]=Coo[0]-posicion_foco(a,e)
+    Coo[0]=Coo[0]+2*posicion_foco(a,e)
     return Coo
 
 def función_orbitas_entera():
     T = calculos_planetas.periodo_planetas()
     T_max = max(T)
-    t_rango = numpy.linspace(0, T_max, 1000)
+    t_rango = numpy.linspace(0, T_max, 500)
     Co_planetas = [t_rango]
     posicion = 0
     for planeta in info_programa.planetas:
